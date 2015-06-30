@@ -1,0 +1,38 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>call services</title>
+    <script src="Scripts/jquery-2.1.4.min.js"></script>
+    <script src="Scripts/bootstrap.js"></script>
+
+
+</head>
+<body>
+    <h2>CORS</h2>
+
+
+    <button id="getPatients">Get Patients</button>
+
+    <pre id="output">
+    </pre>
+
+    <script src="Scripts/jquery-1.10.2.min.js"></script>
+    <script>
+        $(function () {
+            var getPatients = function () {
+                $.get(url).always(showResponse);
+                return false;
+            };
+
+            var showResponse = function (object) {
+                $('#output').text(JSON.stringify(object, null, 4));
+            };
+
+            var url = "http://localhost:2306/api/values";
+
+            $('#getPatients').click(getPatients);
+        });
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,23 @@
+﻿<!DOCTYPE html>
+<html lang="en" >
+<head>
+    <title>Employee Details</title>
+
+    <link href="CSS/amelia.bootstrap.min.css" rel="stylesheet" />
+    <link href="CSS/Site.css" rel="stylesheet" />
+    <script src="Scripts/jquery-2.1.4.min.js"></script>
+    <script src="Scripts/bootstrap.js"></script>
+    <script src="Scripts/angular.min.js"></script>
+    <script src="Scripts/app.js"></script>
+
+    <script src="Controllers/EmployeesController.js"></script>
+</head>
+<body ng-app="ProjectTrackingModule" ng-controller="EmployeesController">
+    <h1>{{Title}}</h1>
+    <p>Employee Name - {{Employees.employeeName}}</p>
+    <p>Designation   - {{Employees.designation}}</p>
+    <p>Contact No.   - {{Employees.contactNo}}</p>
+    <p>EMail ID      - {{Employees.eMailID}}</p>
+    <p>Skill Sets    - {{Employees.skillSets}}</p>
+</body>
+</html>
